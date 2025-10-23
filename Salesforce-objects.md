@@ -14,6 +14,7 @@ erDiagram
     string Name
     string Email
     string Phone
+    number In Store Credit
     string BillingAddress
     string ShippingAddress
     string ExternalId__c "ShopifyCustomerId"
@@ -41,11 +42,18 @@ erDiagram
     string Id PK
     string Name
     string AccountId FK "→ Person Account"
-    string OwnerId FK "→ User"
+    string Opportunity Owner "→ User"
+    percentage Opportnity Owner Split %
+    2nd Sales Person "→ User"
+    percentage 2nd Sales Person Split %
+    3rd Sales Person "→ User"
+    percentage 3rd Sales Person Split %
     string StageName
     date CloseDate
-    number Amount
-    string CurrencyIsoCode
+    number Account Store Credit Available
+    string Initial Opportunity Source
+    string Conversion Source
+    
     string ExternalId__c "ShopifyOrderId"
   }
 
