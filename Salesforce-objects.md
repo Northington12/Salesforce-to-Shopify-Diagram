@@ -82,7 +82,8 @@ erDiagram
   }
 
   OPPORTUNITY_PRODUCT {
-    string OpportunityProductName_PK
+    string ID_PK
+    string OpportunityProductName
     string Rau_Product
     string Short_Description
     string Account_Name
@@ -107,7 +108,8 @@ erDiagram
   }
 
   SHIPPING_REQUEST {
-    string Shipping_Request_Number PK
+    string ID PK
+    string Shipping_Request_Number
     string Request_Status
     string Short_Description
     string Sales_Person
