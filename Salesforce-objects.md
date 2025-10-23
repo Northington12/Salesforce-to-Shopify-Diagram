@@ -82,7 +82,7 @@ erDiagram
   }
 
   OPPORTUNITY_PRODUCT {
-    string ID_PK
+    string ID PK
     string OpportunityProductName
     string Rau_Product
     string Short_Description
