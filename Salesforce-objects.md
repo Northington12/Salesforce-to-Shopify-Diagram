@@ -82,9 +82,24 @@ erDiagram
   }
 
   OPPORTUNITY_PRODUCT {
-    string Id PK
-    string OpportunityId FK
-    string Product2Id FK "RauProduct"
+    string Opportunity Product Name PK
+    string Rau Product
+    string Short Description
+    string Account Name
+    string Account Manager
+    string Opportunity Name FK
+    boolean Include
+    string Opportunity Owner
+    number Refund Payment Amount
+    boolean Is Ongoing Sale
+    boolean RP Free Shipping Override
+    date Closed Won Date
+    boolean Shipped
+    number In Store Credit Initial Payment
+    number Taxable Balance
+    number Sales Tax Percentage
+    number Sale Price
+    number Asking Price
     number Quantity
     number UnitPrice
     string LineStatus__c "On Approval / Returned / Fulfilled"
