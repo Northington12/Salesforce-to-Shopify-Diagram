@@ -10,90 +10,89 @@ erDiagram
   PERSON_ACCOUNT ||--o{ STORE_CREDIT : "credit ledger"
 
   PERSON_ACCOUNT {
-    Id PK
-    Name
-    Email
-    Phone
-    BillingAddress
-    ShippingAddress
-    ExternalId__c "ShopifyCustomerId"
+    string Id PK
+    string Name
+    string Email
+    string Phone
+    string BillingAddress
+    string ShippingAddress
+    string ExternalId__c "ShopifyCustomerId"
   }
 
   USER {
-    Id PK
-    Name
-    Email
-    IsActive
+    string Id PK
+    string Name
+    string Email
+    boolean IsActive
   }
 
   RAU_PRODUCT {
-    Id PK
-    Name
-    RP_Item_Number__c "Internal SKU"
-    ProductCode "Public SKU"
-    Price__c
-    Inventory_Qty__c
-    Publish_to_Web__c
-    ExternalId__c "ShopifyProductId"
+    string Id PK
+    string Name
+    string RP_Item_Number__c "Internal SKU"
+    string ProductCode "Public SKU"
+    number Price__c
+    number Inventory_Qty__c
+    boolean Publish_to_Web__c
+    string ExternalId__c "ShopifyProductId"
   }
 
   OPPORTUNITY {
-    Id PK
-    Name
-    AccountId FK "→ Person Account"
-    OwnerId FK "→ User"
-    StageName
-    CloseDate
-    Amount
-    CurrencyIsoCode
-    ExternalId__c "ShopifyOrderId"
+    string Id PK
+    string Name
+    string AccountId FK "→ Person Account"
+    string OwnerId FK "→ User"
+    string StageName
+    date CloseDate
+    number Amount
+    string CurrencyIsoCode
+    string ExternalId__c "ShopifyOrderId"
   }
 
   OPPORTUNITY_PRODUCT {
-    Id PK
-    OpportunityId FK
-    Product2Id FK "→ Rau Product"
-    Quantity
-    UnitPrice
-    LineStatus__c "On Approval / Returned / Fulfilled"
-    ExternalId__c "ShopifyLineItemId"
+    string Id PK
+    string OpportunityId FK
+    string Product2Id FK "→ Rau Product"
+    number Quantity
+    number UnitPrice
+    string LineStatus__c "On Approval / Returned / Fulfilled"
+    string ExternalId__c "ShopifyLineItemId"
   }
 
   SHIPPING_REQUEST {
-    Id PK
-    OpportunityId FK
-    Status__c "Pending/Picked/Packed/Shipped"
-    Carrier__c
-    TrackingNumber__c
-    ShipDate__c
-    ExternalId__c "ShopifyFulfillmentId"
+    string Id PK
+    string OpportunityId FK
+    string Status__c "Pending/Picked/Packed/Shipped"
+    string Carrier__c
+    string TrackingNumber__c
+    date ShipDate__c
+    string ExternalId__c "ShopifyFulfillmentId"
   }
 
   RMA {
-    Id PK
-    OpportunityProductId FK
-    Quantity__c
-    Reason__c
-    Status__c "Requested/Approved/Received/Refunded"
-    ExternalId__c "ShopifyReturnId"
+    string Id PK
+    string OpportunityProductId FK
+    number Quantity__c
+    string Reason__c
+    string Status__c "Requested/Approved/Received/Refunded"
+    string ExternalId__c "ShopifyReturnId"
   }
 
   PAYMENT {
-    Id PK
-    OpportunityId FK
-    Amount__c
-    Method__c "Card/Cash/ACH/StoreCredit"
-    TransactionId__c
-    SettlementStatus__c
-    ExternalId__c "ShopifyPaymentId"
+    string Id PK
+    string OpportunityId FK
+    number Amount__c
+    string Method__c "Card/Cash/ACH/StoreCredit"
+    string TransactionId__c
+    string SettlementStatus__c
+    string ExternalId__c "ShopifyPaymentId"
   }
 
   STORE_CREDIT {
-    Id PK
-    AccountId FK
-    Balance__c
-    Source__c "RMA/Manual"
-    Related_RMA__c FK
-    ExternalId__c "ShopifyStoreCreditId"
+    string Id PK
+    string AccountId FK
+    number Balance__c
+    string Source__c "RMA/Manual"
+    string Related_RMA__c FK
+    string ExternalId__c "ShopifyStoreCreditId"
   }
-```
