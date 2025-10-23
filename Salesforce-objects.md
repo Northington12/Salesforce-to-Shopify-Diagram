@@ -14,7 +14,7 @@ erDiagram
     string Name
     string Email
     string Phone
-    number In Store Credit
+    number In_Store_Credit
     string BillingAddress
     string ShippingAddress
     string ExternalId__c "ShopifyCustomerId"
@@ -41,26 +41,25 @@ erDiagram
   OPPORTUNITY {
     string Id PK
     string Name
-    string AccountId FK "→ Person Account"
-    string Opportunity Owner "→ User"
-    percentage Opportnity Owner Split %
-    2nd Sales Person "→ User"
-    percentage 2nd Sales Person Split %
-    3rd Sales Person "→ User"
-    percentage 3rd Sales Person Split %
+    string AccountId FK "PersonAccount"
+    string OpportunityOwnerId FK "User"
+    number OpportunityOwnerSplitPercent
+    string Sales_Person_2_Id FK "User"
+    number Sales_Person_2_SplitPercent
+    string Sales_Person_3_Id FK "User"
+    number Sales_Person_3_SplitPercent
     string StageName
     date CloseDate
-    number Account Store Credit Available
-    string Initial Opportunity Source
-    string Conversion Source
-    
+    number Account_Store_Credit_Available
+    string Initial_Opportunity_Source
+    string Conversion_Source
     string ExternalId__c "ShopifyOrderId"
   }
 
   OPPORTUNITY_PRODUCT {
     string Id PK
     string OpportunityId FK
-    string Product2Id FK "→ Rau Product"
+    string Product2Id FK "RauProduct"
     number Quantity
     number UnitPrice
     string LineStatus__c "On Approval / Returned / Fulfilled"
@@ -104,3 +103,5 @@ erDiagram
     string Related_RMA__c FK
     string ExternalId__c "ShopifyStoreCreditId"
   }
+
+```
