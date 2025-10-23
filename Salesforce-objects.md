@@ -40,8 +40,8 @@ erDiagram
 
   OPPORTUNITY {
     string Id PK
-    string Opportunity Name
-    string Account Name FK "PersonAccount"
+    string Opportunity_Name
+    string Account_Name FK "PersonAccount"
     string OpportunityOwnerId FK "User"
     number OpportunityOwnerSplitPercent
     string Sales_Person_2_Id FK "User"
@@ -54,32 +54,31 @@ erDiagram
     string Initial_Opportunity_Source
     string Conversion_Source
     string ExternalId__c "ShopifyOrderId"
-    string IOS Split
-    string IOS Net Sale
-    number Total Sale
-    number Shipping Charged Total
-    number Total Estimated Tax
-    number Sales Tax
-    number Net Sale
-    number Total Payment
-    number Balance Due
-    string Ship to Attention
-    number Ship to Phone
-    string Ship to Address 1
-    string Ship to Address 2
-    string Ship to City
-    string Ship to State
-    string Ship to State
-    string Ship to Zip
-    string Ship to Country
-    string Payment Terms
-    string Invoice Comment
-    boolean Opp Commit Tax
-    number Number of Successful Commits
-    number Number of Failed Commits
-    date Estimate Tax Date
-    date Commit Tax Date
-    string Sales Tax Notes and Comments
+    string IOS_Split
+    string IOS_Net_Sale
+    number Total_Sale
+    number Shipping_Charged_Total
+    number Total_Estimated_Tax
+    number Sales_Tax
+    number Net_Sale
+    number Total_Payment
+    number Balance_Due
+    string Ship_to_Attention
+    number Ship_to_Phone
+    string Ship_to_Address_1
+    string Ship_to_Address_2
+    string Ship_to_City
+    string Ship_to_State
+    string Ship_to_Zip
+    string Ship_to_Country
+    string Payment_Terms
+    string Invoice_Comment
+    boolean Opp_Commit_Tax
+    number Number_of_Successful_Commits
+    number Number_of_Failed_Commits
+    date Estimate_Tax_Date
+    date Commit_Tax_Date
+    string Sales_Tax_Notes_and_Comments
   }
 
   OPPORTUNITY_PRODUCT {
@@ -93,33 +92,32 @@ erDiagram
   }
 
   SHIPPING_REQUEST {
-    string Shipping Request Number PK
-    string Request Status
-    string Short Description
-    string Sales Person
-    string Opportunity Stage
-    string Opportunity Prod
+    string Shipping_Request_Number PK
+    string Request_Status
+    string Short_Description
+    string Sales_Person
+    string Opportunity_Stage
+    string Opportunity_Prod
     string Account
-    string Shipping Request Type
-    boolean Okay to Ship
-    boolean Paid in Full
-    string Shipping When?
-    string Rau Product
-    string Opportunity FK
+    string Shipping_Request_Type
+    boolean Okay_to_Ship
+    boolean Paid_in_Full
+    string Shipping_When
+    string Rau_Product
+    string Opportunity_FK
     string Status__c "Pending/Picked/Packed/Shipped"
     string Carrier__c
     string TrackingNumber__c
     date ShipDate__c
     string ExternalId__c "ShopifyFulfillmentId"
-    string Ship to Attention
-    number Ship to Phone
-    string Ship to Address 1
-    string Ship to Address 2
-    string Ship to City
-    string Ship to State
-    string Ship to State
-    string Ship to Zip
-    string Ship to Country
+    string Ship_to_Attention
+    number Ship_to_Phone
+    string Ship_to_Address_1
+    string Ship_to_Address_2
+    string Ship_to_City
+    string Ship_to_State
+    string Ship_to_Zip
+    string Ship_to_Country
   }
 
   RMA {
